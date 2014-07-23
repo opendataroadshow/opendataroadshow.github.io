@@ -1,56 +1,85 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 body {
-  max-width: 68em;
+  width:100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Nunito', sans-serif; 
-font-weight: 200;
+  margin-top:0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
 }
-  body:after {
-    content: "";
-    display: table;
-    clear: both; }
-
+h1, h2, h3 {
+  font-weight:200;
+}
+a {
+  color:#ff0099;
+  text-decoration:none;
+}
 div.header {
   background-image: url("/img/van.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 500px;
   padding-top: 1em;
-  position: relative; }
+  position: relative;
+  width:100%;
+}
+  div.header .title {
+    background-color:white;
+    width:60%;
+    margin-top:80px;
+    margin-left:20%;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+  }
   div.header h1, div.header h2, div.header h3 {
-    background-color: rgba(204, 204, 204, 0.8);
-    padding-top: .75em;
-    padding-bottom: .75em;
+    margin-top:0;
+    margin-bottom:0;
     padding-left: 10%;
     padding-right: 10%;
-    text-align: center; font-weight: 200;}
+    text-align: center;
+  }
   div.header h1 {
     font-size: 2.5em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+  }
   div.header h2 {
-    font-size: 2em;
-    font-weight: 400; }
+    font-size:1.2em;
+    margin-bottom:1.4em;
+  }
   div.header .next-stop {
-    bottom: 0;
-    margin-left: 30%;
-    position: absolute;
-    width: 40%; }
-  div.header h3 {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0; }
-
+    width:400px;
+    margin:0 auto;
+  }
+  div.header ul {
+    display:inline;
+    list-style-type:none;
+  }
+  div.header ul li {
+    float:left;
+    width:45%;
+  }
+section {
+  width:80%;
+  margin:0 auto;
+  text-align:center;
+}
 section h2 {
+  color:#006666;
   margin-left: 25%;
   padding-top: .75em;
   text-align: center;
   width: 50%; }
 section h2:first-child {
-  border-top: 3px solid blue; }
+  border-top: 1px solid #006666; }
 section ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding-left:0;
+}
+section ul li {
+  margin-bottom:1em;
+}
+section ul.stops li {
+  margin-top:50px;
+}
+section ul.stops li:first-child {
+  margin-top:0;
+}

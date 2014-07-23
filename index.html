@@ -3,10 +3,18 @@ layout: default
 ---
 {% assign posts = site.posts | sort %}
 <div class="header">
+  <div class="title">
   <h1>Open Data Roadshow</h1>
   <h2>Sharing the merits and tactics for implementing open data at the local level</h2>
   <div class="next-stop">
-    <h3>Next stop: {{ posts.first.city }} on {{ posts.first.date | date_to_string }}</h3>
+    <ul>
+      {% for post in posts %}
+      <li>
+        <h3><a href="#stop-{{ post.city }}">{{ post.city }}</a></h3>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
   </div>
 </div>
 <section>
@@ -24,15 +32,19 @@ layout: default
 </section>
 <section>
   <h2>Next stops</h2>
-  <ul>
+  <ul class="stops">
     {% for post in posts %}
     <li>
+      <a name="stop-{{ post.city }}"></a>
       <h3>{{ post.city }}</h3>
-      <datetime>{{ post.date }}</datetime>
+      <datetime>{{ post.date | date: "%A, %B %-d, %Y" }}</datetime>
       <p>{{ post.venue }}</p>
       <a href="{{ post.registration_url }}">Register now</a>
     </li>
     {% endfor %}
   </ul>
-
+</section>
+<section>
+  <h2>Contact</h2>
+  <p>Get in touch with us via email <a href="mailto:wendyfong+opendata@codeforamerica.org">here</a></p>
 </section>
