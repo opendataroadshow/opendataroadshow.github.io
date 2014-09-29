@@ -31,20 +31,7 @@ layout: default
     <li>Sharing resources and  best practices to support governments interested in implementing open data.</li>
   </ul>
 </section>
-<section>
-  <h2>Next stops</h2>
-  <ul class="stops">
-    {% for post in posts %}
-    <li>
-      <a name="stop-{{ post.city }}"></a>
-      <h3>{{ post.city }}</h3>
-      <datetime>{{ post.date | date: "%A, %B %-d, %Y" }}</datetime>
-      <p>{{ post.venue }}</p>
-      <a href="{{ post.registration_url }}">Register now</a>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+
 <section>
   <h2>Contact</h2>
   <p>Get in touch with us via email <a href="mailto:wendyfong+opendata@codeforamerica.org">here</a></p>
